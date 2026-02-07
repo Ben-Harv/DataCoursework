@@ -111,8 +111,6 @@ class Experiment:
             result = evaluator.evaluate(model, self.X_test, self.y_test)
             self.results[name] = result
 
-            #print(f"\n{name}: {result.format_metrics()}")
-
             if show_plots:
                 evaluator.plot(result, self.y_test, title=name)
 

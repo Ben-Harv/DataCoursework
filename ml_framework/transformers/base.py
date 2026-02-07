@@ -31,9 +31,3 @@ class Transformer:
         self.fit(X, y)
         return self.transform(X)
 
-    def __repr__(self):
-        # Show class name and public config attributes (simple types only)
-        attrs = {k: v for k, v in vars(self).items()
-                 if not k.startswith('_') and isinstance(v, (int, float, str, bool, tuple, list))}
-        params = ', '.join(f'{k}={v!r}' for k, v in attrs.items())
-        return f"{self.__class__.__name__}({params})" if params else f"{self.__class__.__name__}()"

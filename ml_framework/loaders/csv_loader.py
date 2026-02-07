@@ -15,5 +15,4 @@ class CSVLoader(DataLoader):
 
     def load(self, path):
         df = pd.read_csv(path, **self.read_kwargs)
-        self._last_loaded = df
         return df

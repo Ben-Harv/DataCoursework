@@ -36,7 +36,7 @@ CorrelationPlotter().plot(exp.df.drop(41, axis=1))
 # Apply transformations
 exp.transform()
 
-# Add models -- each constructor is explicit and self-documenting
+# Add models with grid search parameters
 exp.add_model(Classifier('knn', {'n_neighbors': [1, 3, 5, 7, 9, 11, 13, 15]}, metric='euclidean'))
 exp.add_model(Classifier('logistic', {'C': [0.01, 0.1, 1, 10, 25, 50, 75, 100], 'penalty': ['l1', 'l2']}, solver='liblinear', max_iter=1000))
 exp.add_model(Classifier('svc', {'C': [0.1, 1, 5, 8, 10, 12, 15], 'gamma': ['auto', 'scale']}, probability=True, kernel='rbf', random_state=1))

@@ -66,14 +66,6 @@ class Model:
         """Make predictions."""
         raise NotImplementedError
 
-    def score(self, X, y):
-        """Return the default score for the fitted model."""
-        return self.model.score(X, y)
-
-    def get_params(self):
-        """Return the estimator's current parameters."""
-        return self.estimator.get_params()
-
     def summary(self):
         """Return a human-readable summary string."""
         fitted = 'fitted' if self.is_fitted else 'unfitted'

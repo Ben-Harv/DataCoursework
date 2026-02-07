@@ -5,5 +5,4 @@ MLenv/
 __pycache__/
 *.pyc
 
-# Claude Code session data
-.claude/
+

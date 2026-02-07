@@ -17,5 +17,4 @@ class MatLoader(DataLoader):
     def load(self, path):
         data = loadmat(path)[self.key]
         df = pd.DataFrame(data)
-        self._last_loaded = df
         return df
